@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
 
     //void = don't return
-    //static =
+    //static = call external methods
     public static void main(String[] args){
 
 
@@ -24,11 +24,14 @@ public class Main {
         Calculation calculation = new Calculation();
 
         //print
-        //Como imprimir de volta os valores digitados? --LEO
-        System.out.println("Decrease: "+Calculation.decreaseNum(values));
+        //Print ordering of values
+        System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
 
         //System.out.print(Calculation.divisionNum(45,5));
-        System.out.print("Division: "+Calculation.divisionNum(5,50));
+        System.out.println("Division: "+Calculation.divisionNum(5,27));
+        System.out.println("Summation: "+Calculation.sumNum(values));
+        System.out.println("Multiplication: "+Calculation.multiNum(values));
+        System.out.println("Decrease: "+Calculation.decreaseNum(values));
 
 
     }
