@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Division 02: "+Calculation.divisionNum(45,5));
         System.out.println("Summation: "+Calculation.sumNum(values));
         System.out.println("Multiplication: "+Calculation.multiNum(values));
-        //System.out.println("Decrease: "+Calculation.decreaseNum(values));
+        System.out.println("Decrease: "+Calculation.decreaseNum(values));
 
 
     }

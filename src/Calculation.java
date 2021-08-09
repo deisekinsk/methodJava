@@ -42,8 +42,10 @@ public class Calculation {
         int result = 0;
         int sizeList = listOfValues.size();
 
-        for(int i =  sizeList; i > 0; i--){
-            result -= listOfValues.get(i);
+        for(int i =  sizeList; i >= 0; i--){
+            result = listOfValues.get(i);
+
+
         }
         return result;
 
@@ -55,35 +57,17 @@ public class Calculation {
         if (val1 != 0 && val2 != 0){
             if(val1 > val2){
                 result = val1 /val2;
-            } else if (val2 > val1) {
-                result = val2 / val1;
             }else{
-                System.out.println("Enter a number ≠ 0.");
+                result = val2 / val1;
             }
+        } else {
+            result = 0.001;
         }
 
         return result;
     }
 
-    //TENTANDO ELABORAR DIVISAO POR LISTA | double?
-    /*static int divisionNum(List<Integer> listOfValues){
-        //roam values | for(Integer i:listOfValues)
-        int result = 0;
-        int sizeList = listOfValues.size();
-
-        for(int i = 0; i < sizeList; i++){
-            result = listOfValues.get(i);
-        }
-        //BUGUEI!
-        if (val1 > val2){
-            result = val1/val2;
-        }else{
-            result = val2/val1;
-        }
-
-        return result;
-    }*/
-
+ 
     static int multiNum(List<Integer> listOfValues){
         int result = 1;
         int sizeList = listOfValues.size();
