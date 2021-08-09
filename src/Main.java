@@ -28,10 +28,11 @@ public class Main {
         //System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
 
         //System.out.print(Calculation.divisionNum(45,5));
-        System.out.println("Division: "+Calculation.divisionNum(5,27));
+        System.out.println("Division 01: "+Calculation.divisionNum(45,0));
+        System.out.println("Division 02: "+Calculation.divisionNum(45,5));
         System.out.println("Summation: "+Calculation.sumNum(values));
         System.out.println("Multiplication: "+Calculation.multiNum(values));
-        System.out.println("Decrease: "+Calculation.decreaseNum(values));
+        //System.out.println("Decrease: "+Calculation.decreaseNum(values));
 
 
     }
