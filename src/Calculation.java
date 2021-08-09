@@ -3,6 +3,7 @@ import java.util.List;
 public class Calculation {
 //Pq RESULT=0 não pode ser uma variável global? --LEO
 
+/*
     static int sortList(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
@@ -23,9 +24,8 @@ public class Calculation {
             }
         }
         return result;
-
-
     }
+*/
 
     static int sumNum(List<Integer> listOfValues){
         //roam values | for(Integer i:listOfValues)
@@ -85,16 +85,12 @@ public class Calculation {
 
     static int multiNum(List<Integer> listOfValues){
         //roam values | for(Integer i:listOfValues)
-        int result = 0;
+        int result = 1;
         int sizeList = listOfValues.size();
 
         for(int i = 0; i < sizeList; i++){
             result *= listOfValues.get(i);
 
-        //multiplação está retornando zero
-        /*    if(listOfValues.get(i) === 0){
-
-            }*/
         }
 
 

@@ -25,7 +25,7 @@ public class Main {
 
         //print
         //Print ordering of values
-        System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
+        //System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
 
         //System.out.print(Calculation.divisionNum(45,5));
         System.out.println("Division: "+Calculation.divisionNum(5,27));
