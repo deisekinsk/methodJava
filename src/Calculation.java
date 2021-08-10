@@ -1,30 +1,32 @@
+import javax.swing.*;
+import java.util.Arrays;
 import java.util.List;
 
 public class Calculation {
 
-/*    static int sortList(List<Integer> listOfValues){
+    static List<Integer> sortList(List<Integer> listOfValues){
         int result = 0;
-        int changePosition = 0;
         int sizeList = listOfValues.size();
 
+        Integer arrayList [] = new Integer[sizeList];
         for(int i = 0; i < sizeList; i++){
-            for (int j = 0; j < sizeList; j++){
-                if (listOfValues.get(i) > listOfValues.get(i+1)){
-                    result = listOfValues.get(j);
-                    changePosition = listOfValues.get(j+1);
+            arrayList[i] = listOfValues.get(i);
+        }
 
-                    changePosition = result;
-
-
-                    //Me explica esse parâmetro SET? --LEO
-                    //listOfValues.set(j, listOfValues.get(j+1));
-                    //listOfValues.set(listOfValues.get(j+1),result);
+        for(int i = 0; i < sizeList; i++){
+            for (int j = 0; j < sizeList - 1; j++){
+                //convert
+                if(arrayList[j] > arrayList[j+1]){
+                    result = arrayList[j];
+                    arrayList[j]=arrayList[j+1];
+                    arrayList[j+1]=result;
                 }
 
             }
         }
-        return result;
-    }*/
+        List<Integer> resultA = Arrays.asList(arrayList);
+        return resultA;
+    }
 
 
     static int sumNum(List<Integer> listOfValues){
@@ -42,8 +44,12 @@ public class Calculation {
         int result = 0;
         int sizeList = listOfValues.size();
 
-        for(int i =  sizeList; i >= 0; i--){
-            result = listOfValues.get(i);
+        for(int i =  0; i < sizeList; i++){
+            if(result != 0){
+                result = result - listOfValues.get(i);// 5-2/ 0
+            }else{
+                result = listOfValues.get(i);// 5-2/ 0
+            }
 
 
         }
@@ -54,20 +60,19 @@ public class Calculation {
     static double divisionNum(double val1, double val2){
         double result = 0;
 
-        if (val1 != 0 && val2 != 0){
-            if(val1 > val2){
-                result = val1 /val2;
-            }else{
-                result = val2 / val1;
-            }
-        } else {
-            result = 0.001;
+        try {
+        result = val1 /val2;
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Insert a number != 0." + e.getMessage());
+        }finally {
+            JOptionPane.showMessageDialog(null,"Thank you.");
         }
 
         return result;
     }
 
- 
+
     static int multiNum(List<Integer> listOfValues){
         int result = 1;
         int sizeList = listOfValues.size();

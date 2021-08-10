@@ -8,6 +8,14 @@ public class Main {
     //static = call external methods
     public static void main(String[] args){
 
+        boolean opr = false;
+        String menu;
+        String type = "N";
+        menu = "Choose the option: \n" + "1 = Summation\n" + "2 = Decrease\n";
+
+
+
+
 
         //catch values
         int flag = Integer.parseInt(JOptionPane.showInputDialog(
@@ -25,9 +33,7 @@ public class Main {
 
         //print
         //Print ordering of values
-        //System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
-
-        //System.out.print(Calculation.divisionNum(45,5));
+        System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
         System.out.println("Division 01: "+Calculation.divisionNum(45,0));
         System.out.println("Division 02: "+Calculation.divisionNum(45,5));
         System.out.println("Summation: "+Calculation.sumNum(values));
