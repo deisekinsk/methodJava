@@ -7,19 +7,20 @@ public class Main {
 
     public static void main(String[] args){
 
-        static void typeOpr (boolean opr){
+     static String typeOpr(String opr){
             //boolean opr = false;
             String menu;
             String type = "N";
 
             menu = "Choose the option: \n" + "1 = Summation\n" + "2 = Decrease\n" + "3 = Division\n" + "4 = Multiplication";
-            //opr != true
-            while( !opr){
+            //opr != true | !opr
+            while( opr != true){
                 type =JOptionPane.showInputDialog(menu);
-                if(type.equals(1) || type.equals(2) || type.equals(3) || type.equals(4)){
+                if(type.equals("1") || type.equals("2") || type.equals("3") || type.equals("4")){
                     opr = true;
                 }
             }
+            return type;
         }
 
         //catch values
@@ -39,21 +40,22 @@ public class Main {
         //Print ordering of values
         System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
 
+        String chooseCase = typeOpr(String);
 
-
-        switch(int != 0){
-            case 1:
-                typeOpr( );
+        switch( chooseCase ){
+            case "1":
+                //typeOpr( );
+                chooseCase = "1";
                 System.out.println("Summation: "+Calculation.sumNum(values));
                 break;
-            case 2:
+            case "2":
                 System.out.println("Decrease: "+Calculation.decreaseNum(values));
                 break;
-            case 3:
+            case "3":
                 System.out.println("Division 01: "+Calculation.divisionNum(45,0));
                 System.out.println("Division 02: "+Calculation.divisionNum(45,5));
                 break;
-            case 4:
+            case "4":
                 System.out.println("Multiplication: "+Calculation.multiNum(values));
                 break;
         }
