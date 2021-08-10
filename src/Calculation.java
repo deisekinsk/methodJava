@@ -7,23 +7,23 @@ public class Calculation {
     static List<Integer> sortList(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
-
+        //convert to array
         Integer arrayList [] = new Integer[sizeList];
         for(int i = 0; i < sizeList; i++){
             arrayList[i] = listOfValues.get(i);
         }
-
+        //sort
         for(int i = 0; i < sizeList; i++){
             for (int j = 0; j < sizeList - 1; j++){
-                //convert
+                //swap
                 if(arrayList[j] > arrayList[j+1]){
                     result = arrayList[j];
                     arrayList[j]=arrayList[j+1];
                     arrayList[j+1]=result;
                 }
-
             }
         }
+        //convert to List
         List<Integer> resultA = Arrays.asList(arrayList);
         return resultA;
     }
@@ -50,11 +50,8 @@ public class Calculation {
             }else{
                 result = listOfValues.get(i);// 5-2/ 0
             }
-
-
         }
         return result;
-
     }
 
     static double divisionNum(double val1, double val2){
@@ -68,7 +65,6 @@ public class Calculation {
         }finally {
             JOptionPane.showMessageDialog(null,"Thank you.");
         }
-
         return result;
     }
 
@@ -80,7 +76,6 @@ public class Calculation {
         for(int i = 0; i < sizeList; i++){
             result *= listOfValues.get(i);
         }
-
         if (result == 1) {
             return 0;
         }else{
