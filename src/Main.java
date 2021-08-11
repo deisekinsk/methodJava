@@ -46,7 +46,7 @@ public class Main {
 
     String chooseCase = "0";
 
-    switch( chooseCase ){
+    switch( chooseCase){
         case "1":
             //typeOpr( );
             chooseCase = "1";
