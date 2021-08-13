@@ -38,18 +38,13 @@ public class Main {
         //object
         Calculation calculation = new Calculation();
 
-        Main c = new Main();
-        c.typeOpr();
-
         //Print ordering of values
         System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
+        System.out.println("Arithmetic Mean Values: " + EspCalculation.meanNum(values));
 
-    String chooseCase = "0";
 
-    switch( chooseCase){
+    switch(typeOpr()){
         case "1":
-            //typeOpr( );
-            chooseCase = "1";
             System.out.println("Summation: "+Calculation.sumNum(values));
             break;
         case "2":

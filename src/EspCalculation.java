@@ -1,16 +1,14 @@
 import java.util.List;
 
-public class EspCalculation {
+public class EspCalculation extends Calculation {
 
-    static int meanNum(List<Integer> listOfValues){
+    static double meanNum(List<Integer> listOfValues){
         //Como chamar o método sumNum?
-        int result = 0;
+        int result = Calculation.sumNum(listOfValues);
         int sizeList = listOfValues.size();
+        double mean = result/sizeList;
 
-        for(int i = 0; i < sizeList; i++){
-            result += listOfValues.get(i);
-        }
-        return result/sizeList;
+        return mean;
 
     }
 
