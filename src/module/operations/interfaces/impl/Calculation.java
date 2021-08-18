@@ -1,10 +1,15 @@
+package module.operations.interfaces.impl;
+
+import module.calculations.interfaces.impl.BasicOperations;
+
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class Calculation {
+public class Calculation implements BasicOperations {
 
-    static List<Integer> sortList(List<Integer> listOfValues){
+    @Override
+    public static List<Integer> sortList(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
         //convert to array
@@ -29,7 +34,7 @@ public class Calculation {
     }
 
 
-    static int sumNum(List<Integer> listOfValues){
+    public static int sumNum(List<Integer> listOfValues){
         //roam values | for(Integer i:listOfValues)
         int result = 0;
         int sizeList = listOfValues.size();
@@ -40,7 +45,7 @@ public class Calculation {
         return result;
     }
 
-    static int decreaseNum(List<Integer> listOfValues){
+    public static int decreaseNum(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
 
@@ -54,7 +59,7 @@ public class Calculation {
         return result;
     }
 
-    static double divisionNum(double val1, double val2){
+    public static double divisionNum(double val1, double val2){
         double result = 0;
 
         try {
@@ -69,7 +74,7 @@ public class Calculation {
     }
 
 
-    static int multiNum(List<Integer> listOfValues){
+    public static int multiNum(List<Integer> listOfValues){
         int result = 1;
         int sizeList = listOfValues.size();
 
