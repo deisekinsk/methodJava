@@ -9,13 +9,13 @@ public class EspCalculation implements CalculationInterface {
     int result;
     int sizeList;
     @Override
-    public void meanNum(List<Integer> listOfValues){
+    public double meanNum(List<Integer> listOfValues){
 
         result = Calculation.sumNum(listOfValues);
         sizeList = listOfValues.size();
         double mean = result/sizeList;
 
-        //return mean;
+        return mean;
 
     }
 
