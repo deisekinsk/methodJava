@@ -43,7 +43,7 @@ public class AppView {
 
         //Print ordering of values
         System.out.println("Your numbers in crescent order are :" + Calculation.sortList(values));
-        //System.out.println("Arithmetic Mean Values: " + EspCalculation.meanNum(values));
+        System.out.println("Arithmetic Mean Values: " + EspCalculation.meanNum(values));
 
 
         switch(typeOpr()){

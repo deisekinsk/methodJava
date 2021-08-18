@@ -1,5 +1,6 @@
 package module.operations.interfaces.impl;
 
+import module.calculations.interfaces.CalculationInterface;
 import module.calculations.interfaces.impl.BasicOperations;
 
 import javax.swing.*;
@@ -9,7 +10,7 @@ import java.util.List;
 public class Calculation implements BasicOperations {
 
     @Override
-    public List<Integer> sortList(List<Integer> listOfValues){
+    public static List<Integer> sortList(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
         //convert to array
@@ -34,7 +35,7 @@ public class Calculation implements BasicOperations {
     }
 
     @Override
-    public int sumNum(List<Integer> listOfValues) {
+    public static int sumNum(List<Integer> listOfValues) {
         //roam values | for(Integer i:listOfValues)
         int result = 0;
         int sizeList = listOfValues.size();
@@ -46,7 +47,7 @@ public class Calculation implements BasicOperations {
     }
 
     @Override
-    public int decreaseNum(List<Integer> listOfValues){
+    public static int decreaseNum(List<Integer> listOfValues){
         int result = 0;
         int sizeList = listOfValues.size();
 
@@ -61,7 +62,7 @@ public class Calculation implements BasicOperations {
     }
 
     @Override
-    public double divisionNum(double val1, double val2){
+    public static double divisionNum(double val1, double val2){
         double result = 0;
 
         try {
@@ -76,7 +77,7 @@ public class Calculation implements BasicOperations {
     }
 
     @Override
-    public int multiNum(List<Integer> listOfValues){
+    public static int multiNum(List<Integer> listOfValues){
         int result = 1;
         int sizeList = listOfValues.size();
 

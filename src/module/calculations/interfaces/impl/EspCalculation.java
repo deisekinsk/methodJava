@@ -8,8 +8,9 @@ import java.util.List;
 public class EspCalculation implements CalculationInterface {
     int result;
     int sizeList;
+
     @Override
-    public double meanNum(List<Integer> listOfValues){
+    public static double meanNum(List<Integer> listOfValues){
 
         result = Calculation.sumNum(listOfValues);
         sizeList = listOfValues.size();
@@ -18,6 +19,8 @@ public class EspCalculation implements CalculationInterface {
         return mean;
 
     }
+
+
 
 }
 
