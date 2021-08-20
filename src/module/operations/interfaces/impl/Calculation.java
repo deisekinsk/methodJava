@@ -93,7 +93,15 @@ public class Calculation implements BasicOperations {
 
     @Override
     public double meanNum(List<Integer> listOfValues) {
-        return 0;
+        int result;
+        int sizeList;
+
+        result = sumNum(listOfValues);
+        sizeList = listOfValues.size();
+        double mean = result/sizeList;
+
+        return mean;
+
     }
 
 }

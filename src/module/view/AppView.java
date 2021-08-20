@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AppView {
 
-    //variavel que recebe uma classe
+    //variable receive a class
     private Calculation calculation;
 
     public AppView() {
@@ -16,7 +16,7 @@ public class AppView {
     }
 
     public void showViews() {
-        //instancia a classe
+        //instance of class
         calculation = new Calculation();
         //
         int flag = Integer.parseInt(JOptionPane.showInputDialog(
@@ -43,6 +43,7 @@ public class AppView {
             }
 
             System.out.println("Numbers: " + calculation.sortList(values));
+            System.out.println("Mean Numbers: " + calculation.meanNum(values));
 
             //
             switch (type) {
