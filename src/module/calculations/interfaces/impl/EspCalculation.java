@@ -9,40 +9,35 @@ import java.util.List;
 public class EspCalculation implements CalculationInterface {
 
     @Override
-    public double inss(List<Integer> listOfValues) {
-        double salario;
-        double increValue;
-        double percent;
+    public double descontoInss(double salario) {
+        double inss = 0;
 
         double faixaA = 1100.01;
         double faixaB = 2203.48;
-        double faixaC = 3305.22;
+        double faixaC = 3305.23;
         double faixaD = 6433.57;
 
-        double inss;
-
-
-
+        double percentA = 0.075;
+        double percentB = 0.09;
+        double percentC = 0.12;
+        double percentD = 0.14;
 
         if(salario <= faixaA){
-            //7,5%
+            inss = salario * percentA;
 
         }else if (salario > faixaA && salario<= faixaB){
-            //9%
+            inss = (faixaA*percentA)+((salario-faixaA)*percentB);
+
         }else if (salario > faixaB && salario<= faixaC){
-            percent = 12/100;
-            salario = 3000;
-            double increValue = (salario*percent);
-            inss = ((salario - faixaB).percent) + increValue;
+            inss = (faixaA*percentA)+((faixaB-faixaA)*percentB)+((salario-faixaB)*percentC);
 
         }else if (salario > faixaC && salario<= faixaD ){
-            //14%
+            inss = (faixaA*percentA)+((faixaB-faixaA)*percentB)+((faixaC-faixaB)*percentC)+((salario-faixaC)*percentD);
+
         }else{
-            System.out.print("This value doesn't work. It's so right");
+            System.out.print("Value above allowed.");
         }
-
-
-        return 1.0;
+        return inss;
     }
 
     @Override
