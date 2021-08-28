@@ -4,6 +4,7 @@ import module.calculations.interfaces.CalculationInterface;
 import module.operations.interfaces.impl.Calculation;
 
 
+import javax.swing.*;
 import java.util.List;
 
 public class EspCalculation implements CalculationInterface {
@@ -41,7 +42,35 @@ public class EspCalculation implements CalculationInterface {
     }
 
     @Override
-    public int fundoGarantia(List<Integer> listOfValues) {
+    public double  fundoGarantia (double salario) {
+
+        double recolhimentoNormal= 0.08;
+        //double jovemAprendiz = 0.02;
+        //double trabaDomestica = 0.112;
+        double rendimentoAno = 0.03;
+
+        boolean semJustaCausa = true;
+        double multaRecisoria = 0.40;
+
+
+
+        double result = 0;
+
+        try {
+            double desconto =
+
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Insert a number != 0." + e.getMessage());
+        }finally {
+            JOptionPane.showMessageDialog(null,"Thank you.");
+        }
+        return result;
+
+
+
+
+
         return 1;
     }
 

@@ -6,12 +6,12 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppView {
+public class MathView {
 
     //variable receive a class
     private Calculation calculation;
 
-    public AppView() {
+    public MathView() {
         showViews();
     }
 

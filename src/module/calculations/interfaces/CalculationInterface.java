@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CalculationInterface {
     double descontoInss(double salario);
-    int fundoGarantia(List<Integer> listOfValues);
+    double fundoGarantia(double salario);
     int irpf(List<Integer> listOfValues);
 
 }

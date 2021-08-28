@@ -1,4 +1,4 @@
-import module.view.AppView;
+import module.view.MathView;
 
 
 public class Main {
@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        AppView appView = new AppView();
+        MathView mathView = new MathView();
 
 
 
