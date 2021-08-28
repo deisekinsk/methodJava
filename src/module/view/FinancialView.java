@@ -1,13 +1,19 @@
 package module.view;
 
+import module.calculations.interfaces.impl.EspCalculation;
+
 public class FinancialView {
 
     //put a variable to receive a class
-    
+    private EspCalculation espCalculation;
 
-    //MathViews to receive the method of Views
-    private FinancialView() {};
+    //Constructor to receive the method of Views
+    public FinancialView( ) {financialViews();}
 
-    //Create a instance of class
+    //Create method of views
+    public void financialViews() {
+        
+
+    }
 
 }
