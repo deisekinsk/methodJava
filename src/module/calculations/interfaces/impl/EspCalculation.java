@@ -44,20 +44,28 @@ public class EspCalculation implements CalculationInterface {
     @Override
     public double  fundoGarantia (double salario) {
 
+
+        boolean opr false;
+
         double recolhimentoNormal= 0.08;
         //double jovemAprendiz = 0.02;
-        //double trabaDomestica = 0.112;
-        double rendimentoAno = 0.03;
-
+        //double trabaDomestica = 0.12;
+        //data para calcular meses
         boolean semJustaCausa = true;
         double multaRecisoria = 0.40;
+        double meses = 27;
+
+        double valorDesconto = salario * recolhimentoNormal;
+        double recolhimentoMeses = meses * valorDesconto;
+        double recolhimentoMulta = recolhimentoMeses + (multaRecisoria*recolhimentoMeses);
+
 
 
 
         double result = 0;
 
         try {
-            double desconto =
+            //double desconto =
 
 
         } catch (Exception e) {
@@ -71,7 +79,7 @@ public class EspCalculation implements CalculationInterface {
 
 
 
-        return 1;
+        //return 1;
     }
 
     @Override
