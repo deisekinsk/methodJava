@@ -49,13 +49,13 @@ public class FinancialView {
 
             switch (type) {
                 case "1":
-                    //System.out.println("INSS: " + espCalculation.descontoInss(payValue));
+                    System.out.println("INSS: " + espCalculation.descontoInss(payValue));
                     break;
                 case "2":
-                    //System.out.println("FGTS: " + espCalculation.fundoGarantia(payValue));
+                    System.out.println("FGTS: " + espCalculation.fundoGarantia(payValue));
                     break;
                 case "3":
-                    //System.out.println("IRPF: " + espCalculation.irpf(payValue));
+                    System.out.println("IRPF: " + espCalculation.irpf(payValue));
                     break;
             }
     }
