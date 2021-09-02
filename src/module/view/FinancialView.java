@@ -3,8 +3,6 @@ package module.view;
 import module.calculations.interfaces.impl.EspCalculation;
 
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FinancialView {
 
@@ -24,7 +22,7 @@ public class FinancialView {
                 "Qual o seu salário?"));
         double payValue = flag;
 
-            
+
             boolean opr = false;
             String menuSelect;
             String type = "N";
@@ -43,7 +41,7 @@ public class FinancialView {
 
             switch (type) {
                 case "1":
-                    System.out.println("INSS: " + espCalculation.descontoInss(payValue));
+                System.out.println("INSS: " + (espCalculation.descontoInss(payValue)) + "|(Salário:"+payValue+")" );
                     break;
                 case "2":
                     System.out.println("FGTS: " + espCalculation.fundoGarantia(payValue));
