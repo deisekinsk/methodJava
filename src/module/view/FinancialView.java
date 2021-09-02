@@ -22,15 +22,9 @@ public class FinancialView {
         //receive value
         double flag = Double.parseDouble(JOptionPane.showInputDialog(
                 "Qual o seu salário?"));
-        List<Double> payValue = new ArrayList<Double>();
+        double payValue = flag;
 
-        //data value
-
-        //work type
-
-            //date
-            payValue.add(flag);
-
+            
             boolean opr = false;
             String menuSelect;
             String type = "N";
