@@ -2,7 +2,6 @@ package module.calculations.interfaces.impl;
 
 import module.calculations.interfaces.CalculationInterface;
 
-
 import javax.swing.*;
 
 public class EspCalculation implements CalculationInterface {
@@ -55,12 +54,15 @@ public class EspCalculation implements CalculationInterface {
             recolhimento = 0.08;
         } else if (recolhimentoType.equals("2")){
             recolhimento = 0.02;
-        }else{
+        }else if (recolhimentoType.equals("3")){
             recolhimento = 0.12;
         }
 
         //data para calcular meses
-        double meses = 27;
+        double flag = Double.parseDouble(JOptionPane.showInputDialog(
+                "Quantos meses trabalhados?"));
+        double meses = flag;
+
         double multaRecisoria = 0.40;
 
         double valorDesconto = salario * recolhimento;
@@ -71,12 +73,11 @@ public class EspCalculation implements CalculationInterface {
         return recolhimentoMulta;
     }
 
-    //List<Integer> sortList(List<Integer> listOfValues)
 
     @Override
     public double irpf(double salario) {
         double inss = 0;
-        descontoInss(inss);
+        //descontoInss(inss);
 
         double irpfFinal = 0;
         double valorBase = salario - inss;
