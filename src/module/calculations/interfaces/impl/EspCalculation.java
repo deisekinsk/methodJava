@@ -76,11 +76,11 @@ public class EspCalculation implements CalculationInterface {
 
     @Override
     public double irpf(double salario) {
-        double inss = 0;
-        //descontoInss(inss);
+
+        double classValue = descontoInss(salario);
 
         double irpfFinal = 0;
-        double valorBase = salario - inss;
+        double valorBase = salario - classValue;
 
 
         double faixaA = 1903.99;
