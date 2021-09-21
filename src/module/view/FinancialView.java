@@ -18,11 +18,17 @@ public class FinancialView {
         espCalculation = new EspCalculation();
 
         //receive value
-        double flag = Double.parseDouble(JOptionPane.showInputDialog(
-                "Qual o seu salário?"));
-        double payValue = flag;
+        double payValue = 0;
+
+        try{
+            payValue = Double.parseDouble(JOptionPane.showInputDialog(
+                    "Qual o seu salário?"));
 
 
+        }catch(Exception e){
+            System.exit(1);
+
+        }
             boolean opr = false;
             String menuSelect;
             String type = "N";

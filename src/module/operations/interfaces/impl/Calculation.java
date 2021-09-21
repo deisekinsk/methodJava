@@ -10,22 +10,22 @@ import java.util.List;
 public class Calculation implements BasicOperations {
 
     @Override
-    public List<Integer> sortList(List<Integer> listOfValues){
+    public List<Integer> sortList(List<Integer> listOfValues) {
         int result = 0;
         int sizeList = listOfValues.size();
         //convert to array
-        Integer arrayList [] = new Integer[sizeList];
-        for(int i = 0; i < sizeList; i++){
+        Integer arrayList[] = new Integer[sizeList];
+        for (int i = 0; i < sizeList; i++) {
             arrayList[i] = listOfValues.get(i);
         }
         //sort
-        for(int i = 0; i < sizeList; i++){
-            for (int j = 0; j < sizeList - 1; j++){
+        for (int i = 0; i < sizeList; i++) {
+            for (int j = 0; j < sizeList - 1; j++) {
                 //swap
-                if(arrayList[j] > arrayList[j+1]){
+                if (arrayList[j] > arrayList[j + 1]) {
                     result = arrayList[j];
-                    arrayList[j]=arrayList[j+1];
-                    arrayList[j+1]=result;
+                    arrayList[j] = arrayList[j + 1];
+                    arrayList[j + 1] = result;
                 }
             }
         }
@@ -40,21 +40,21 @@ public class Calculation implements BasicOperations {
         int result = 0;
         int sizeList = listOfValues.size();
 
-        for(int i = 0; i < sizeList; i++){
+        for (int i = 0; i < sizeList; i++) {
             result += listOfValues.get(i);
         }
         return result;
     }
 
     @Override
-    public int decreaseNum(List<Integer> listOfValues){
+    public int decreaseNum(List<Integer> listOfValues) {
         int result = 0;
         int sizeList = listOfValues.size();
 
-        for(int i =  0; i < sizeList; i++){
-            if(result != 0){
+        for (int i = 0; i < sizeList; i++) {
+            if (result != 0) {
                 result = result - listOfValues.get(i);// 5-2/ 0
-            }else{
+            } else {
                 result = listOfValues.get(i);// 5-2/ 0
             }
         }
@@ -62,34 +62,34 @@ public class Calculation implements BasicOperations {
     }
 
     @Override
-    public double divisionNum(double val1, double val2){
+    public double divisionNum(double val1, double val2) {
         double result = 0;
 
         try {
-        result = val1 /val2;
+            result = val1 / val2;
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Insert a number != 0." + e.getMessage());
-        }finally {
-            JOptionPane.showMessageDialog(null,"Thank you.");
+            JOptionPane.showMessageDialog(null, "Insert a number != 0." + e.getMessage());
+        } finally {
+            JOptionPane.showMessageDialog(null, "Thank you.");
         }
         return result;
     }
 
     @Override
-    public int multiNum(List<Integer> listOfValues){
+    public int multiNum(List<Integer> listOfValues) {
         int result = 1;
         int sizeList = listOfValues.size();
 
-        for(int i = 0; i < sizeList; i++){
+        for (int i = 0; i < sizeList; i++) {
             result *= listOfValues.get(i);
         }
         if (result == 1) {
             return 0;
-        }else{
+        } else {
             return result;
-            }
         }
+    }
 
     @Override
     public double meanNum(List<Integer> listOfValues) {
@@ -98,7 +98,7 @@ public class Calculation implements BasicOperations {
 
         result = sumNum(listOfValues);
         sizeList = listOfValues.size();
-        double mean = result/sizeList;
+        double mean = result / sizeList;
 
         return mean;
 
