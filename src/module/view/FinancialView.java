@@ -21,9 +21,12 @@ public class FinancialView {
         double payValue = 0;
 
         try{
-            payValue = Double.parseDouble(JOptionPane.showInputDialog(
-                    "Qual o seu salário?"));
+            String valueEnter = JOptionPane.showInputDialog(
+                    "Qual o seu salário?");
 
+            valueEnter = valueEnter.replace(",",".");
+
+            payValue = Double.parseDouble(valueEnter);
 
         }catch(Exception e){
             System.exit(1);
