@@ -37,27 +37,21 @@ public class MenuView extends JFrame implements ActionListener{
         panel.add(b2);
         add(panel);
 
-
-
         setSize(400,400);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
-        public void setButton(){
-            ActionListener buttonL = new ActionListener(){
-                @Override
-                public void actionPerformed(ActionEvent e) {
+    }
 
-                    if(e.getSource()== b1){
-                        financialView.financialViews();
-                    }if(e.getSource()== b2) {
-                        mathView.showViews();
-                    }
-                }
-            };
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if(e.getSource()== "b1"){
+            financialView.financialViews();
+        }if(e.getSource()== "b2") {
+            mathView.showViews();
         }
-
     }
 
 }
