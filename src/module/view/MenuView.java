@@ -11,12 +11,12 @@ public class MenuView extends JFrame implements ActionListener{
     private FinancialView financialView;
     private MathView mathView;
 
+    JButton b1=new JButton("Financeira");
+    JButton b2=new JButton("Matemática");
+
     //constructor
     public MenuView(){
-        super("Calculadora Matemática e Financeira.");
-
-        financialView = new FinancialView();
-        mathView = new MathView();
+        super("Calculadora Matemática e Financeira");
 
         JPanel panel=new JPanel();
         panel.setBounds(100,125,200,200);
@@ -24,11 +24,9 @@ public class MenuView extends JFrame implements ActionListener{
         panel.setLayout(new FlowLayout());
         JLabel label = new JLabel("Escolha uma opção: ");
 
-        JButton b1=new JButton("Matemática");
         b1.setBounds(0,0,80,30);
         b1.addActionListener(this);
 
-        JButton b2=new JButton("Financeira");
         b2.setBounds(0,0,80,30);
         b2.addActionListener(this);
 
@@ -46,11 +44,10 @@ public class MenuView extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        if(e.getSource()== "b1"){
-            financialView.financialViews();
-        }if(e.getSource()== "b2") {
-            mathView.showViews();
+        if(e.getSource()== b1){
+            new FinancialView();
+        }if(e.getSource()== b2) {
+            new MathView();
         }
     }
 
